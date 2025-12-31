@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
   
-  
   const header = document.querySelector("header");
   if (header) {
     header.addEventListener("click", function () {
@@ -8,28 +7,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  
-  const anchorLinks = document.querySelectorAll('a[href^="#"]');
-  anchorLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      const targetId = this.getAttribute('href').substring(1);
-      const targetElement = document.getElementById(targetId);
-      
-      if (targetElement) {
-        targetElement.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-      }
-    });
-  });
-
-  
   const scrollTopBtn = document.createElement('button');
   scrollTopBtn.innerHTML = '↑';
   scrollTopBtn.setAttribute('id', 'scrollTopBtn');
-  
   scrollTopBtn.style.cssText = `
     position: fixed;
     bottom: 20px;
@@ -50,7 +30,6 @@ document.addEventListener("DOMContentLoaded", function () {
   `;
   document.body.appendChild(scrollTopBtn);
 
-  
   window.addEventListener('scroll', function() {
     if (window.pageYOffset > 300) {
       scrollTopBtn.style.display = 'block';
@@ -59,7 +38,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  
   scrollTopBtn.addEventListener('click', function() {
     window.scrollTo({
       top: 0,
@@ -67,5 +45,5 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  console.log('ABG Profile: Page loaded successfully!');
+  console.log('Page loaded successfully!');
 });
