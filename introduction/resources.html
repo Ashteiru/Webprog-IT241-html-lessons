@@ -3,44 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resources</title>
+    <title>Resources - Ashton Brian Garcia</title>
     <link rel="stylesheet" href="../home/css/flexbox-grid.css">
-    <style>
-        body { font-family: Arial, sans-serif; padding: 20px; line-height: 1.6; }
-        ul { margin-bottom: 20px; }
-    </style>
 </head>
 <body>
+    <div class="container">
 
-    <h1>Resources Used</h1>
+        <header class="hero-section" style="min-height: auto; padding: 3rem 0;">
+            <div class="intro-text">
+                <h1>Resources Used</h1>
+            </div>
+        </header>
 
-    <p>The following resources were used in the development of this profile website:</p>
+        <div class="divider"></div>
 
-    <ul>
-        <li>
-            <strong>MDN Web Docs (Mozilla Developer Network)</strong> – Used as the primary reference for <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">HTML5 semantic elements</a> (header, main, footer).
-        </li>
-        <li>
-            <strong>MDN CSS Flexible Box Layout</strong> – Reference for implementing the layout structure in <code>flexbox-grid.css</code>.
-        </li>
-        <li>
-            <strong>MDN CSS Grid Layout</strong> – Reference for the main container grid system used in the CSS.
-        </li>
-        <li>
-            <strong>MDN JavaScript Event Reference</strong> – Guide for implementing the <code>click</code> and <code>DOMContentLoaded</code> event listeners in <code>script.js</code>.
-        </li>
-        <li>
-            <strong>W3C HTML Validator</strong> – Used to validate the markup structure.
-        </li>
-        <li>
-            <strong>W3C CSS Validator</strong> – Used to validate stylesheet syntax.
-        </li>
-        <li>
-            <strong>Vue.js 3 (CDN)</strong> – Progressive JavaScript framework used for reactive data binding and displaying the skills list dynamically.
-        </li>
-    </ul>
+        <main>
+            <section class="info-grid" style="grid-template-columns: 1fr; max-width: 800px; margin: 0 auto;">
+                
+                <div class="card">
+                    <p>The following resources were used in the development of this profile website:</p>
+                    
+                    <ul style="text-align: left; display: inline-block; margin-top: 1.5rem; padding-left: 20px;">
+                        <li style="margin-bottom: 1rem;">
+                            <strong>MDN Web Docs (Mozilla Developer Network)</strong> – Used as the primary reference for <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank" style="color: #F1C40F; text-decoration: underline;">HTML5 semantic elements</a> (header, main, footer).
+                        </li>
+                        <li style="margin-bottom: 1rem;">
+                            <strong>MDN CSS Flexible Box Layout</strong> – Reference for implementing the layout structure in <code>flexbox-grid.css</code>.
+                        </li>
+                        <li style="margin-bottom: 1rem;">
+                            <strong>MDN CSS Grid Layout</strong> – Reference for the main container grid system used in the CSS.
+                        </li>
+                        <li style="margin-bottom: 1rem;">
+                            <strong>MDN JavaScript Event Reference</strong> – Guide for implementing the <code>click</code> and <code>DOMContentLoaded</code> event listeners in <code>script.js</code>.
+                        </li>
+                        <li style="margin-bottom: 1rem;">
+                            <strong>W3C HTML Validator</strong> – Used to validate the markup structure.
+                        </li>
+                        <li style="margin-bottom: 1rem;">
+                            <strong>W3C CSS Validator</strong> – Used to validate stylesheet syntax.
+                        </li>
+                        <li>
+                            <strong>Vue.js 3 (CDN)</strong> – Progressive JavaScript framework used for reactive data binding and displaying the skills list dynamically.
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
 
-    <a href="../home/index.html">Back to Profile</a>
+        <footer>
+            <p>IT241 WEBPROG | <a href="../home/index.html" style="color: #F1C40F;">Back to Profile</a></p>
+        </footer>
 
+    </div>
 </body>
 </html>
