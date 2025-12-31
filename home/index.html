@@ -10,7 +10,7 @@
     <div class="container" id="app">
         <header class="hero-section">
             <div class="profile-placeholder">
-                <span>IMG</span>
+                <img src="https://s3.amazonaws.com/comicgeeks/characters/avatars/1.jpg" alt="Profile Picture" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
             <div class="intro-text">
                 <h1>Ashton Brian Garcia</h1>
@@ -55,7 +55,13 @@
                     <h3>Skills</h3>
                     <p>My technical skills are basic skills</p>
                     <ul class="skills-list">
-                        <li v-for="skill in skills">{{ skill }}</li>
+                        <li>HTML5 & CSS3</li>
+                        <li>JavaScript ES6+</li>
+                        <li>Vue.js 3</li>
+                        <li>Flexbox & Grid Layout</li>
+                        <li>Git & GitHub</li>
+                        <li>Responsive Web Design</li>
+                        <li>Arduino Programming</li>
                     </ul>
                 </div>
             </section>
@@ -74,15 +80,8 @@
         createApp({
             data() {
                 return {
-                    skills: [
-                        'HTML5 & CSS3',
-                        'JavaScript ES6+',
-                        'Vue.js 3',
-                        'Flexbox & Grid Layout',
-                        'Git & GitHub',
-                        'Responsive Web Design',
-                        'Arduino Programming'
-                    ]
+                    // Skills are now hardcoded in HTML for validation purposes
+                    message: 'Welcome to my profile'
                 }
             }
         }).mount('#app');
