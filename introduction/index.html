@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ABG Profile Website</title>
-  <link rel="stylesheet" href="../home/css/flexbox-grid.css">
-    <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.js"></script>
+  <link rel="stylesheet" href="css/flexbox-grid.css"> 
+  <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
 
-<div class="container id="app"">
+<div class="container" id="app">
 
   <header>
     <h1>Ashton Brian Garcia</h1>
@@ -19,43 +19,43 @@
     <section class="main-content">
 
       <div>
-        <h3> About me</h3>
+        <h3>About me</h3>
         <p>I am a student who is interested in Technology.</p>
       </div>
 
       <div>
-        <h3> Education / Achievements</h3>
+        <h3>Education / Achievements</h3>
         <p>NU MOA<br>Asia Pacific College</p>
       </div>
 
       <div>
-        <h3> Course</h3>
+        <h3>Course</h3>
         <p>Information Technology</p>
       </div>
 
       <div>
-        <h3> IT Experience</h3>
+        <h3>IT Experience</h3>
         <p>I have experience using basic coding.</p>
       </div>
 
       <div>
-        <h3> Hobbies & Interests</h3>
+        <h3>Hobbies & Interests</h3>
         <p>Gaming<br>Bedrotting</p>
       </div>
 
       <div>
-        <h3> Goals In Life / Dream</h3>
+        <h3>Goals In Life / Dream</h3>
         <p>To have a stable job.</p>
       </div>
 
-
-            <div>
-        <h3> Skills</h3>
-        <p>My technical skills is basic skills</p>
-        <ul>
+      <div>
+        <h3>Skills</h3>
+        <p>My technical skills are basic:</p> 
+        <ul style="text-align: left; padding-left: 20px;">
           <li v-for="skill in skills" :key="skill">{{ skill }}</li>
         </ul>
       </div>
+
     </section>
 
     <aside class="sidebar"></aside>
@@ -69,24 +69,26 @@
 </div>
 
 <script src="js/script.js"></script>
-  <script>
-    // Vue.js App
-    const { createApp } = Vue;
-    createApp({
-      data() {
-        return {
-          skills: [
-            'HTML5 & CSS3',
-            'JavaScript ES6+',
-            'Vue.js 3',
-            'Flexbox & Grid Layout',
-            'Git & GitHub',
-            'Responsive Web Design',
-            'Arduino Programming'
-          ]
-        }
+
+<script>
+  const { createApp } = Vue;
+
+  createApp({
+    data() {
+      return {
+        skills: [
+          'HTML5 & CSS3',
+          'JavaScript ES6+',
+          'Vue.js 3',
+          'Flexbox & Grid Layout',
+          'Git & GitHub',
+          'Responsive Web Design',
+          'Arduino Programming'
+        ]
       }
-    }).mount('#app');
-  </script>
+    }
+  }).mount('#app');
+</script>
+
 </body>
 </html>
