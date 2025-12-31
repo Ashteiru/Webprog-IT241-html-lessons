@@ -1,33 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-      <link rel="stylesheet" href="css/flexbox-grid.css?version=0.3"> 
-<title>ABG Profile Website</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABG Profile Website</title>
+  <link rel="stylesheet" href="css/flexbox-grid.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
 
+<div class="container id="app"">
 
-  
-<div class="container">
-  <header> <h1>Personal Profile Web page</h1> </header>
+  <header>
+    <h1>Personal Profile Web Page</h1>
+  </header>
+
   <main>
-    <section class="main-content">    
-        
-    <div>1 About Me</div>
-    <div>2 Education / Achievements</div>
-    <div>3 Course </div>  
-    <div>4 IT Experience</div>
-    <div>5 Hobbies & Interests</div>
-    <div>6 Goals In Life / Dream</div>  
-    <div>7 Picture Gallery</div>
+    <section class="main-content">
 
+      <div>
+        <h3>1 About Me</h3>
+        <p>I am a student who is interested in Technology.</p>
+      </div>
+
+      <div>
+        <h3>2 Education / Achievements</h3>
+        <p>NU MOA<br>Asia Pacific College</p>
+      </div>
+
+      <div>
+        <h3>3 Course</h3>
+        <p>Information Technology</p>
+      </div>
+
+      <div>
+        <h3>4 IT Experience</h3>
+        <p>I have experience using basic coding.</p>
+      </div>
+
+      <div>
+        <h3>5 Hobbies & Interests</h3>
+        <p>Gaming<br>Bedrotting</p>
+      </div>
+
+      <div>
+        <h3>6 Goals In Life / Dream</h3>
+        <p>To have a stable job.</p>
+      </div>
+
+
+            <div>
+        <h3>7 Skills</h3>
+        <p>My technical skills (powered by Vue.js):</p>
+        <ul>
+          <li v-for="skill in skills" :key="skill">{{ skill }}</li>
+        </ul>
+      </div>
     </section>
-    <aside class="sidebar">
-     </aside>
+
+    <aside class="sidebar"></aside>
   </main>
-  <footer> IT241 WEBPROG    </footer>
+
+  <footer>
+    IT241 WEBPROG |
+    <a href="resources.html">Resources</a>
+  </footer>
+
 </div>
 
-
+<script src="js/script.js"></script>
+  <script>
+    // Vue.js App
+    const { createApp } = Vue;
+    createApp({
+      data() {
+        return {
+          skills: [
+            'HTML5 & CSS3',
+            'JavaScript ES6+',
+            'Vue.js 3',
+            'Flexbox & Grid Layout',
+            'Git & GitHub',
+            'Responsive Web Design',
+            'Arduino Programming'
+          ]
+        }
+      }
+    }).mount('#app');
+  </script>
 </body>
 </html>
